@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SGRegular";
+  src: url("/public/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SGBold";
+  src: url("/public/fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("/public/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("/public/fonts/Poppins/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsMediumItalic";
+  src: url("/public/fonts/Poppins/Poppins-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsBoldItalic";
+  src: url("/public/fonts/Poppins/Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsExtraBoldItalic";
+  src: url("/public/fonts/Poppins/Poppins-ExtraBoldItalic.ttf");
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/******** Techno Summit **************/
+@layer base {
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  .techno-stroke {
+    -webkit-text-stroke: 3px #000;
+    /* color: transparent; */
+  }
+
+  .techno-text-shadow {
+    text-shadow: 0.35rem 0.35rem 0px #000;
+  }
+
+  /* .techno-btn-shadow {
+    box-shadow: 0.35rem 0.35rem 0px #000;
+  } */
+
+  .sponsor3box {
+    @apply aspect-square w-5 border-2 border-techno-black sm:w-6 md:w-9 md:border-[3px];
+  }
+
+  .svg-socmed {
+    color: white;
+  }
+
+  /**************** Summit Animations ***************/
+  .potato-animate {
+    animation: appear-disappear 2000ms infinite;
+  }
+  @keyframes appear-disappear {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.ice-cream-up {
+  animation: ice-cream-up 2000ms infinite;
+}
+@keyframes ice-cream-up {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.water-side {
+  animation: growing-width 2000ms infinite;
+}
+@keyframes growing-width {
+  0% {
+    /* width: 100%; */
+    scale: 1;
+    transform-origin: center;
+  }
+  20% {
+    scale: 1.1;
+    /* width: 110%; */
+  }
+  80% {
+    scale: 1.1;
+    /* width: 110%; */
+  }
+  100% {
+    scale: 1;
+    /* width: 100%; */
+  }
+}

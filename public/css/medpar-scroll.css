@@ -1,0 +1,43 @@
+.img-fix {
+  aspect-ratio: 1/1;
+  width: 20vw;
+  max-height: 100%;
+}
+
+.scroller {
+  max-width: 100vw;
+  /* border: 1px solid lime; */
+}
+
+.inner_scroller {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 2%; */
+  gap: 1.5rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+.scroller[data-animated="true"] .inner_scroller {
+  flex-wrap: nowrap;
+  animation: scroll 10s linear infinite;
+
+  /*! May cause problems */
+  width: max-content;
+}
+
+.scroller[data-direction="left"] .inner_scroller {
+  animation-direction: forwards;
+}
+
+.scroller[data-direction="right"] .inner_scroller {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  to {
+    translate: calc(-50% - calc(1.5rem / 2));
+  }
+}

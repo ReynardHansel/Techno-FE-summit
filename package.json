@@ -1,0 +1,19 @@
+{
+  "name": "technoscape2024-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@designbycode/tailwindcss-text-stroke": "^1.2.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/base.css -o ./public/css/base/build.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.13"
+  }
+}
